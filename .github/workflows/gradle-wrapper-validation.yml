@@ -16,4 +16,3 @@ jobs:
       - uses: gradle/wrapper-validation-action@v1
       - run: chmod +x ./gradlew
       - run: ./gradlew jar
-        working-directory: "C:" 
