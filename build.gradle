@@ -27,12 +27,11 @@ publishing {
         }
     }
 }
-MainClassName = 'Hello'
 
 jar {
   manifest {
     attributes(
-      'Main-Class': MainClassName
+      'Main-Class': 'Hello'
     )
   }
   archiveFileName = 'muthu.jar'
