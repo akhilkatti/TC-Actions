@@ -35,7 +35,7 @@ jar {
     )
   }
   archiveFileName = 'muthu.jar'
-  destinationDirectory = file('./src')
+  destinationDirectory = file('C:')
 }
 
 wrapper {
