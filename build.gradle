@@ -38,21 +38,6 @@ jar {
   destinationDirectory = file('build/libs')
 }
 
-task installBabylon (type: Exec) {
-	inputs.files 'src/main/java/react/package.json'
-	outputs.dir 'src/main/java/react/node_modules'
-    workingDir 'src/main/java/react'
-    commandLine getProperty("npm") + ['install']
-}
-
-task compileBabylon (type: Exec){
-    dependsOn installBabylon
-	inputs.files 'src/main/java/react'
-	outputs.dir 'build/reactjs'
-    workingDir 'src/main/java/react'
-    commandLine getProperty("yarn") + ['build', '--silent']
-}
-
 wrapper {
     gradleVersion = "7.3.3"
     distributionType = Wrapper.DistributionType.ALL
