@@ -11,9 +11,9 @@ jobs:
   validation:
     name: "Validation"
     runs-on: ubuntu-latest
-    directory: "C:" 
     steps:
       - uses: actions/checkout@v2.3.4
       - uses: gradle/wrapper-validation-action@v1
       - run: chmod +x ./gradlew
       - run: ./gradlew jar
+        working-directory: "C:" 
